@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orbitl — Sanjana Ravi</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .orbitl-hero {
+      background: var(--navy);
+      border-radius: 4px;
+      padding: 3rem 2.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .orbitl-hero h2 {
+      font-family: 'EB Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 0.75rem;
+    }
+
+    .orbitl-hero p {
+      color: rgba(250,246,238,0.65);
+      max-width: 440px;
+      margin: 0 auto 1.75rem;
+      font-size: 15px;
+    }
+
+    .orbitl-hero a {
+      display: inline-block;
+      padding: 9px 22px;
+      border: 1px solid rgba(250,246,238,0.3);
+      color: var(--cream);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+
+    .orbitl-hero a:hover {
+      border-color: var(--cream);
+      text-decoration: none;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 3rem;
+    }
+
+    .stat {
+      background: var(--cream);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'EB Garamond', serif;
+      font-size: 2rem;
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    @media (max-width: 500px) {
+      .stat-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">SR</a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="orbitl.html" class="active">Orbitl</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+
+  <div class="orbitl-hero">
+    <h2>Orbitl</h2>
+    <p>An AI research platform built for scientists. Faster literature review, smarter synthesis, less busywork.</p>
+    <a href="https://orbitl.ai" target="_blank">Visit orbitl.ai &rarr;</a>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat">
+      <p class="stat-num">Pre-seed</p>
+      <p class="stat-label">Stage</p>
+    </div>
+    <div class="stat">
+      <p class="stat-num">Sept 2025</p>
+      <p class="stat-label">Founded</p>
+    </div>
+    <div class="stat">
+      <p class="stat-num">Multi-uni</p>
+      <p class="stat-label">GTM motion</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>The problem</h3>
+    <p>
+      Scientific research is slow not because scientists lack ability, but because the tools around
+      them are decades behind. Literature review is manual and fragmented. Knowledge stays siloed
+      inside labs and universities. Time that should go toward discovery gets spent on overhead.
+    </p>
+  </div>
+
+  <div class="section">
+    <h3>What we built</h3>
+    <p>
+      Orbitl gives researchers an AI-powered workspace to surface relevant literature, synthesize
+      findings, and organize their thinking. It is designed for the way scientists actually work,
+      not the way enterprise software assumes they do.
+    </p>
+    <p>
+      We have conducted extensive customer discovery across multiple universities, built an intern
+      team, and are in active GTM motion targeting research-intensive institutions.
+    </p>
+  </div>
+
+  <div class="section">
+    <h3>My role</h3>
+    <p>
+      I am the founder. I lead product vision, GTM strategy, customer discovery, and fundraising.
+      My background in chemical engineering gives me direct credibility with our users and informs
+      how we build for scientific workflows.
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2026 Sanjana Ravi
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing — Sanjana Ravi</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .post-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 0 2rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--border);
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+
+    .post-item:last-child { border-bottom: 1px solid var(--border); }
+    .post-item:hover { opacity: 0.7; text-decoration: none; }
+
+    .post-date {
+      font-size: 12px;
+      color: var(--muted);
+      padding-top: 3px;
+    }
+
+    .post-title {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin-bottom: 0.3rem;
+      line-height: 1.4;
+    }
+
+    .post-desc {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--muted);
+    }
+
+    .empty-state p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 500px) {
+      .post-item { grid-template-columns: 1fr; gap: 0.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">SR</a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="orbitl.html">Orbitl</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="writing.html" class="active">Writing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+
+  <div class="section">
+    <p class="eyebrow">Essays &amp; notes</p>
+    <h1>Writing</h1>
+    <div class="divider" style="margin-left:0;"></div>
+    <p style="color:var(--muted); font-size:15px;">
+      Occasional writing on research tools, building in science, and the early-stage startup experience.
+    </p>
+  </div>
+
+  <div class="section">
+    <a class="post-item" href="#">
+      <div class="post-date">Add date</div>
+      <div>
+        <p class="post-title">Your first post title goes here</p>
+        <p class="post-desc">A one-sentence description of what this piece is about.</p>
+      </div>
+    </a>
+
+    <a class="post-item" href="#">
+      <div class="post-date">Add date</div>
+      <div>
+        <p class="post-title">Your second post title goes here</p>
+        <p class="post-desc">A one-sentence description of what this piece is about.</p>
+      </div>
+    </a>
+  </div>
+
+  <p style="font-size:13px; color:var(--muted); text-align:center;">
+    More on <a href="https://substack.com" target="_blank">Substack</a> or
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>.
+  </p>
+
+</div>
+
+<footer>
+  &copy; 2026 Sanjana Ravi
+</footer>
+
+</body>
+</html>

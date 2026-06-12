@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanjana Ravi</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero {
+      padding-top: 60px;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 10px 24px;
+      background: var(--navy);
+      color: var(--cream);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--mid);
+      text-decoration: none;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      padding: 10px 24px;
+      border: 1px solid var(--border);
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+
+    .hero-rule {
+      width: 1px;
+      height: 60px;
+      background: var(--border);
+      margin: 3rem auto;
+    }
+
+    .quick-facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 4rem;
+    }
+
+    .fact {
+      background: var(--cream);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+    }
+
+    .fact-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .fact-value {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.1rem;
+      color: var(--navy);
+    }
+
+    @media (max-width: 500px) {
+      .quick-facts { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">SR</a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="orbitl.html">Orbitl</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <div class="hero">
+    <p class="hero-eyebrow">Founder &amp; Chemical Engineer</p>
+    <h1>Sanjana Ravi</h1>
+    <p class="hero-sub">
+      Building Orbitl, an AI research platform for scientists.
+      UC Berkeley ChemE. Antler Residency. SkyDeck PAD-13.
+    </p>
+    <div class="hero-links">
+      <a href="orbitl.html" class="btn-primary">View Orbitl</a>
+      <a href="about.html" class="btn-secondary">About me</a>
+    </div>
+
+    <div class="hero-rule"></div>
+
+    <div class="quick-facts">
+      <div class="fact">
+        <p class="fact-label">Current</p>
+        <p class="fact-value">Founder, Orbitl</p>
+      </div>
+      <div class="fact">
+        <p class="fact-label">Education</p>
+        <p class="fact-value">UC Berkeley ChemE</p>
+      </div>
+      <div class="fact">
+        <p class="fact-label">Based in</p>
+        <p class="fact-value">San Francisco, CA</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 Sanjana Ravi
+</footer>
+
+</body>
+</html>

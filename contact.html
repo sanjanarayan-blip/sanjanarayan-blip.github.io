@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Sanjana Ravi</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-links {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 0;
+      border-top: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--navy);
+      transition: opacity 0.15s;
+    }
+
+    .contact-row:last-child { border-bottom: 1px solid var(--border); }
+    .contact-row:hover { opacity: 0.6; }
+
+    .contact-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .contact-value {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.05rem;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .arrow {
+      font-size: 1rem;
+      color: var(--muted);
+      transition: transform 0.15s;
+    }
+
+    .contact-row:hover .arrow { transform: translateX(4px); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">SR</a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="orbitl.html">Orbitl</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+
+  <div class="section">
+    <p class="eyebrow">Get in touch</p>
+    <h1>Contact</h1>
+    <div class="divider" style="margin-left:0;"></div>
+    <p style="color:var(--muted); font-size:15px; max-width:420px;">
+      Open to conversations about research tools, GTM strategy, venture, and building in science.
+    </p>
+  </div>
+
+  <div class="contact-links">
+    <a class="contact-row" href="mailto:your@email.com">
+      <span class="contact-label">Email</span>
+      <span class="contact-value">your@email.com <span class="arrow">&rarr;</span></span>
+    </a>
+    <a class="contact-row" href="https://linkedin.com/in/yourhandle" target="_blank">
+      <span class="contact-label">LinkedIn</span>
+      <span class="contact-value">linkedin.com/in/yourhandle <span class="arrow">&rarr;</span></span>
+    </a>
+    <a class="contact-row" href="https://twitter.com/yourhandle" target="_blank">
+      <span class="contact-label">Twitter / X</span>
+      <span class="contact-value">@yourhandle <span class="arrow">&rarr;</span></span>
+    </a>
+    <a class="contact-row" href="https://orbitl.ai" target="_blank">
+      <span class="contact-label">Orbitl</span>
+      <span class="contact-value">orbitl.ai <span class="arrow">&rarr;</span></span>
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2026 Sanjana Ravi
+</footer>
+
+</body>
+</html>
