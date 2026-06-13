@@ -3,8 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Sanjana Ravi</title>
+  <title>About — Sanjana Rayan</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-top: 1.5rem;
+    }
+
+    .skill-cell {
+      background: #fff;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .skill-cell-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-cell p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.65;
+    }
+
+    .accolade-list {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .accolade {
+      background: #fff;
+      padding: 1.25rem 1.5rem;
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 0 1.5rem;
+      align-items: start;
+    }
+
+    .accolade-year {
+      font-size: 12px;
+      color: var(--muted);
+      padding-top: 2px;
+    }
+
+    .accolade-title {
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--navy);
+      margin-bottom: 0.2rem;
+    }
+
+    .accolade-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .interest-row {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    @media (max-width: 540px) {
+      .skills-grid { grid-template-columns: 1fr; }
+      .accolade { grid-template-columns: 1fr; gap: 0.25rem; }
+    }
+  </style>
 </head>
 <body>
 
@@ -15,7 +98,6 @@
       <li><a href="about.html" class="active">About</a></li>
       <li><a href="orbitl.html">Orbitl</a></li>
       <li><a href="experience.html">Experience</a></li>
-      <li><a href="writing.html">Writing</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
@@ -25,65 +107,132 @@
 
   <div class="section">
     <p class="eyebrow">About</p>
-    <h1>Background</h1>
-    <div class="divider" style="margin-left:0;"></div>
-
-    <p>
-      I'm a chemical engineer turned founder, currently building Orbitl, an AI research platform
-      designed for scientists. I graduated from UC Berkeley in May 2026 with a degree in
-      Chemical Engineering.
-    </p>
-    <p>
-      My path into startups came from seeing firsthand how fragmented and slow research workflows
-      are across universities. I started Orbitl in September 2025 to fix that, starting with
-      customer discovery across multiple universities and building toward a product scientists
-      actually want to use.
-    </p>
-    <p>
-      I'm part of Antler Residency, SkyDeck PAD-13, and STEP, programs that have sharpened how
-      I think about building, selling, and scaling early-stage companies. I'm drawn to roles at
-      the intersection of GTM, business development, and venture, where I can combine commercial
-      instincts with technical credibility.
+    <h1>Sanjana Rayan</h1>
+    <div class="divider"></div>
+    <p style="font-size:17px; font-weight:300; color:var(--muted); max-width:560px; line-height:1.85;">
+      I am a chemical engineer, researcher, and founder. I work at the intersection of deep
+      science and commercial execution. I research things, build products around them, and
+      sell them to the people who need them.
     </p>
   </div>
 
   <div class="section">
-    <h3>Programs &amp; Affiliations</h3>
-    <div style="margin-top:1rem;">
-      <div class="card">
-        <p class="card-meta">2026</p>
-        <p style="font-weight:500; margin-bottom:0.2rem;">Antler Residency</p>
-        <p style="font-size:14px; color:var(--muted); margin:0;">Early-stage venture builder program.</p>
+    <h3>In my own words</h3>
+    <p>
+      I grew up thinking science and business were separate worlds. UC Berkeley showed me they
+      don't have to be. I spent my undergrad years doing real research: quantum chemistry at
+      Lawrence Berkeley National Lab, perovskite crystal growth at the Wu Lab, battery cell
+      characterization at Teserac, and cross-functional engineering at Ford. Each role taught
+      me something different about how science actually moves from idea to impact.
+    </p>
+    <p>
+      Orbitl came from watching that process up close and seeing how much friction gets in the
+      way. Scientists spend too much time on overhead and not enough on discovery. I started
+      building a fix in September 2025, and in under a year ran 200+ customer discovery interviews,
+      built a GTM motion across 12+ universities, and brought in a 4-person team.
+    </p>
+    <p>
+      Outside of work I collect vinyl records, think too hard about coffee, care about fashion
+      sustainability, and try to visit somewhere new as often as possible. I led Alpha Chi Sigma,
+      Berkeley's professional chemistry fraternity, as President for 100+ members. I believe the
+      best operators are people who are curious about everything and systematic about a few things.
+    </p>
+  </div>
+
+  <div class="section">
+    <h3>What I am good at</h3>
+    <div class="skills-grid">
+      <div class="skill-cell">
+        <p class="skill-cell-label">GTM &amp; Sales</p>
+        <p>B2B sales cycles, dual-track GTM, cold outreach and sequencing, pilot-to-conversion design, objection mapping, CRM management, Apollo, AI-assisted personalization</p>
       </div>
-      <div class="card">
-        <p class="card-meta">2025 &ndash; 2026</p>
-        <p style="font-weight:500; margin-bottom:0.2rem;">SkyDeck PAD-13</p>
-        <p style="font-size:14px; color:var(--muted); margin:0;">UC Berkeley's startup accelerator. Cohort 13.</p>
+      <div class="skill-cell">
+        <p class="skill-cell-label">Research &amp; Analysis</p>
+        <p>HPC quantum chemistry workflows, computational chemistry (AutoTS, Jaguar), photoluminescence spectroscopy, Voigt profile fitting, experimental data pipeline design</p>
       </div>
-      <div class="card">
-        <p class="card-meta">2025 &ndash; 2026</p>
-        <p style="font-weight:500; margin-bottom:0.2rem;">STEP</p>
-        <p style="font-size:14px; color:var(--muted); margin:0;">Student entrepreneurship program at Berkeley.</p>
+      <div class="skill-cell">
+        <p class="skill-cell-label">Fundraising &amp; Finance</p>
+        <p>Pre-seed SAFE execution, ARR modeling, burn rate, unit economics, investor decks, milestone-based pricing, NDA drafting, pilot agreement structuring</p>
+      </div>
+      <div class="skill-cell">
+        <p class="skill-cell-label">Leadership &amp; Ops</p>
+        <p>Team building, intern hiring and management, committee oversight, cross-functional coordination, sprint prioritization, onboarding flow design</p>
+      </div>
+      <div class="skill-cell">
+        <p class="skill-cell-label">Technical</p>
+        <p>Python (Pandas, Plotly Express), MATLAB, GROMACS, HPC workflow management, Raman spectroscopy, cell performance and cycle life testing, CAD, CT scan analysis</p>
+      </div>
+      <div class="skill-cell">
+        <p class="skill-cell-label">Domain Knowledge</p>
+        <p>Battery electrochemistry, SEI chemistry, Li-ion cell characterization (18650, 2170, 46XX), perovskite crystal growth, photovoltaic materials, IPC standards, dip solder processes</p>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <h3>Interests</h3>
-    <div style="margin-top:1rem;">
-      <span class="tag">Research tools</span>
-      <span class="tag">GTM strategy</span>
-      <span class="tag">Venture</span>
-      <span class="tag">Science infrastructure</span>
-      <span class="tag">AI applications</span>
-      <span class="tag">Chemical engineering</span>
+    <h3>Programs &amp; Recognition</h3>
+    <div class="accolade-list">
+      <div class="accolade">
+        <span class="accolade-year">2026</span>
+        <div>
+          <p class="accolade-title">Antler Residency</p>
+          <p class="accolade-sub">Global early-stage venture builder program.</p>
+        </div>
+      </div>
+      <div class="accolade">
+        <span class="accolade-year">2026</span>
+        <div>
+          <p class="accolade-title">SkyDeck PAD-13</p>
+          <p class="accolade-sub">UC Berkeley's startup accelerator. Cohort 13.</p>
+        </div>
+      </div>
+      <div class="accolade">
+        <span class="accolade-year">2025</span>
+        <div>
+          <p class="accolade-title">STEP</p>
+          <p class="accolade-sub">Student Entrepreneurship Program at UC Berkeley.</p>
+        </div>
+      </div>
+      <div class="accolade">
+        <span class="accolade-year">2023&ndash;26</span>
+        <div>
+          <p class="accolade-title">President, Alpha Chi Sigma Chemistry Fraternity</p>
+          <p class="accolade-sub">Led 100+ member professional chemistry fraternity. Oversaw committees, alumni relations, and outreach to underserved communities.</p>
+        </div>
+      </div>
+      <div class="accolade">
+        <span class="accolade-year">2023&ndash;26</span>
+        <div>
+          <p class="accolade-title">Chem-E-Car, UC Berkeley</p>
+          <p class="accolade-sub">Built a sodium-ion powered car using Prussian Blue cathodes, carbon anodes, and sodium perchlorate electrolytes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Outside work</h3>
+    <div class="interest-row">
+      <span class="tag">Vinyl records</span>
+      <span class="tag">Coffee critique</span>
+      <span class="tag">Fashion sustainability</span>
+      <span class="tag">Travel</span>
+      <span class="tag">Volunteering</span>
+      <span class="tag">Lake Merritt Food Pantry</span>
+      <span class="tag">Berkeley Project</span>
+      <span class="tag">ISHVA Foundation</span>
     </div>
   </div>
 
 </div>
 
 <footer>
-  &copy; 2026 Sanjana Ravi
+  <span>&copy; 2026 Sanjana Rayan</span>
+  <div class="footer-links">
+    <a href="https://x.com/sanjanarayan" target="_blank">X</a>
+    <a href="https://www.linkedin.com/in/sanjanarayan/" target="_blank">LinkedIn</a>
+    <a href="mailto:sanjanarayan@berkeley.edu">Email</a>
+  </div>
 </footer>
 
 </body>
