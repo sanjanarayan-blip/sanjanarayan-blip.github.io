@@ -17,10 +17,7 @@
       margin-top: 1.5rem;
     }
 
-    .skill-cell {
-      background: #fff;
-      padding: 1.25rem 1.5rem;
-    }
+    .skill-cell { background: #fff; padding: 1.25rem 1.5rem; }
 
     .skill-cell-label {
       font-size: 10px;
@@ -31,12 +28,7 @@
       margin-bottom: 0.5rem;
     }
 
-    .skill-cell p {
-      font-size: 13px;
-      color: var(--muted);
-      margin: 0;
-      line-height: 1.65;
-    }
+    .skill-cell p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.65; }
 
     .accolade-list {
       margin-top: 1.5rem;
@@ -57,35 +49,45 @@
       align-items: start;
     }
 
-    .accolade-year {
-      font-size: 12px;
-      color: var(--muted);
-      padding-top: 2px;
+    .accolade-year { font-size: 12px; color: var(--muted); padding-top: 2px; }
+    .accolade-title { font-weight: 500; font-size: 14px; color: var(--navy); margin-bottom: 0.2rem; }
+    .accolade-sub { font-size: 13px; color: var(--muted); margin: 0; }
+
+    .interest-grid {
+      margin-top: 1.25rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      overflow: hidden;
     }
 
-    .accolade-title {
-      font-weight: 500;
-      font-size: 14px;
-      color: var(--navy);
-      margin-bottom: 0.2rem;
+    .interest-cell {
+      background: #fff;
+      padding: 1.1rem 1.25rem;
+      text-decoration: none;
+      transition: background 0.15s;
     }
 
-    .accolade-sub {
+    .interest-cell:hover { background: var(--sand); }
+
+    .interest-emoji { font-size: 1.2rem; margin-bottom: 0.35rem; }
+
+    .interest-name {
       font-size: 13px;
-      color: var(--muted);
-      margin: 0;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 0.1rem;
     }
 
-    .interest-row {
-      margin-top: 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    .interest-note { font-size: 12px; color: var(--muted); margin: 0; }
 
     @media (max-width: 540px) {
       .skills-grid { grid-template-columns: 1fr; }
       .accolade { grid-template-columns: 1fr; gap: 0.25rem; }
+      .interest-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -106,41 +108,45 @@
 <div class="page">
 
   <div class="section">
-    <p class="eyebrow">About</p>
+    <p class="eyebrow">About me</p>
     <h1>Sanjana Rayan</h1>
     <div class="divider"></div>
-    <p style="font-size:17px; font-weight:300; color:var(--muted); max-width:560px; line-height:1.85;">
-      I am a chemical engineer, researcher, and founder. I work at the intersection of deep
-      science and commercial execution. I research things, build products around them, and
-      sell them to the people who need them.
+    <p style="font-size:17px; font-weight:300; color:var(--muted); max-width:540px; line-height:1.9;">
+      Chemical engineer, researcher, and founder. I love building things that sit at the
+      intersection of hard science and real commercial impact.
     </p>
   </div>
 
   <div class="section">
-    <h3>In my own words</h3>
+    <h3>A bit about me</h3>
     <p>
-      I grew up thinking science and business were separate worlds. UC Berkeley showed me they
-      don't have to be. I spent my undergrad years doing real research: quantum chemistry at
-      Lawrence Berkeley National Lab, perovskite crystal growth at the Wu Lab, battery cell
-      characterization at Teserac, and cross-functional engineering at Ford. Each role taught
-      me something different about how science actually moves from idea to impact.
+      I grew up thinking science and business were separate worlds. UC Berkeley changed that.
+      I spent my undergrad doing real research: quantum chemistry at Lawrence Berkeley National Lab,
+      perovskite crystal growth at the Wu Lab, battery cell characterization at Chemix, and
+      cross-functional supplier engineering at Ford. Every role taught me something different
+      about how science moves from idea to actual impact.
     </p>
     <p>
-      Orbitl came from watching that process up close and seeing how much friction gets in the
-      way. Scientists spend too much time on overhead and not enough on discovery. I started
-      building a fix in September 2025, and in under a year ran 200+ customer discovery interviews,
-      built a GTM motion across 12+ universities, and brought in a 4-person team.
+      Orbitl came from watching that process up close and noticing how much friction slows
+      scientists down. I started building a fix in September 2025, ran 200+ customer discovery
+      interviews, built a GTM motion across 12+ universities, and put together a 4-person team,
+      all while finishing my degree.
     </p>
     <p>
-      Outside of work I collect vinyl records, think too hard about coffee, care about fashion
-      sustainability, and try to visit somewhere new as often as possible. I led Alpha Chi Sigma,
-      Berkeley's professional chemistry fraternity, as President for 100+ members. I believe the
-      best operators are people who are curious about everything and systematic about a few things.
+      I led Alpha Chi Sigma, Berkeley's professional chemistry fraternity, as President for 100+
+      members. I care a lot about community, especially making science more accessible and
+      welcoming for people who don't always see themselves in it.
+    </p>
+    <p>
+      When I'm not working I'm probably listening to vinyl, on my bike, playing badminton, or
+      halfway through a crochet project. I also do charcoal art and think way too hard about
+      coffee. I believe the best operators are curious about everything and systematic about
+      a few things.
     </p>
   </div>
 
   <div class="section">
-    <h3>What I am good at</h3>
+    <h3>What I'm good at</h3>
     <div class="skills-grid">
       <div class="skill-cell">
         <p class="skill-cell-label">GTM &amp; Sales</p>
@@ -170,7 +176,7 @@
   </div>
 
   <div class="section">
-    <h3>Programs &amp; Recognition</h3>
+    <h3>Programs &amp; involvement</h3>
     <div class="accolade-list">
       <div class="accolade">
         <span class="accolade-year">2026</span>
@@ -207,20 +213,59 @@
           <p class="accolade-sub">Built a sodium-ion powered car using Prussian Blue cathodes, carbon anodes, and sodium perchlorate electrolytes.</p>
         </div>
       </div>
+      <div class="accolade">
+        <span class="accolade-year">Ongoing</span>
+        <div>
+          <p class="accolade-title">Volunteering</p>
+          <p class="accolade-sub">Lake Merritt Food Pantry, Berkeley Project, ISHVA Foundation, Denim Day, Sustainability Clothing Drives, Student Orientation Leader.</p>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="section">
     <h3>Outside work</h3>
-    <div class="interest-row">
-      <span class="tag">Vinyl records</span>
-      <span class="tag">Coffee critique</span>
-      <span class="tag">Fashion sustainability</span>
-      <span class="tag">Travel</span>
-      <span class="tag">Volunteering</span>
-      <span class="tag">Lake Merritt Food Pantry</span>
-      <span class="tag">Berkeley Project</span>
-      <span class="tag">ISHVA Foundation</span>
+    <div class="interest-grid">
+      <a class="interest-cell" href="https://beli.app" target="_blank">
+        <p class="interest-emoji">🎵</p>
+        <p class="interest-name">Vinyl &amp; Music</p>
+        <p class="interest-note">See what I'm listening to on Beli</p>
+      </a>
+      <div class="interest-cell">
+        <p class="interest-emoji">🏸</p>
+        <p class="interest-name">Badminton</p>
+        <p class="interest-note">Always down for a match</p>
+      </div>
+      <div class="interest-cell">
+        <p class="interest-emoji">🚲</p>
+        <p class="interest-name">Biking</p>
+        <p class="interest-note">Best way to see a new city</p>
+      </div>
+      <div class="interest-cell">
+        <p class="interest-emoji">🎨</p>
+        <p class="interest-name">Charcoal art</p>
+        <p class="interest-note">Portraits mostly</p>
+      </div>
+      <div class="interest-cell">
+        <p class="interest-emoji">🧶</p>
+        <p class="interest-name">Crochet</p>
+        <p class="interest-note">Always mid-project</p>
+      </div>
+      <div class="interest-cell">
+        <p class="interest-emoji">☕</p>
+        <p class="interest-name">Coffee</p>
+        <p class="interest-note">Serious about it</p>
+      </div>
+      <div class="interest-cell">
+        <p class="interest-emoji">✈️</p>
+        <p class="interest-name">Travel</p>
+        <p class="interest-note">Always planning the next trip</p>
+      </div>
+      <div class="interest-cell">
+        <p class="interest-emoji">♻️</p>
+        <p class="interest-name">Fashion sustainability</p>
+        <p class="interest-note">Thrift first, always</p>
+      </div>
     </div>
   </div>
 
@@ -229,7 +274,7 @@
 <footer>
   <span>&copy; 2026 Sanjana Rayan</span>
   <div class="footer-links">
-    <a href="https://x.com/sanjanarayan" target="_blank">X</a>
+    <a href="https://x.com/sanjanabrayan" target="_blank">X</a>
     <a href="https://www.linkedin.com/in/sanjanarayan/" target="_blank">LinkedIn</a>
     <a href="mailto:sanjanarayan@berkeley.edu">Email</a>
   </div>
