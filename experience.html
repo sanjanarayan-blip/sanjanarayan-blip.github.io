@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experience — Sanjana Ravi</title>
+  <title>Experience — Sanjana Rayan</title>
   <link rel="stylesheet" href="style.css">
   <style>
     .exp-item {
       display: grid;
-      grid-template-columns: 100px 1fr;
-      gap: 0 2rem;
-      padding: 1.75rem 0;
+      grid-template-columns: 110px 1fr;
+      gap: 0 2.5rem;
+      padding: 2rem 0;
       border-top: 1px solid var(--border);
     }
 
     .exp-item:last-child { border-bottom: 1px solid var(--border); }
 
     .exp-date {
-      font-size: 12px;
+      font-size: 11px;
       color: var(--muted);
-      padding-top: 3px;
-      line-height: 1.5;
+      padding-top: 4px;
+      line-height: 1.6;
+      letter-spacing: 0.02em;
     }
 
     .exp-title {
@@ -33,18 +34,105 @@
     .exp-org {
       font-size: 13px;
       color: var(--accent);
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.02em;
     }
 
-    .exp-desc {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.65;
+    .exp-bullets {
+      list-style: none;
+      padding: 0;
       margin: 0;
     }
 
-    @media (max-width: 500px) {
-      .exp-item { grid-template-columns: 1fr; gap: 0.4rem; }
+    .exp-bullets li {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+      padding-left: 1rem;
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+
+    .exp-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.65em;
+      width: 4px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .exp-bullets li:last-child { margin-bottom: 0; }
+
+    .section-divider {
+      margin: 3rem 0 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .section-divider h3 { margin: 0; }
+
+    .section-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-top: 1.5rem;
+    }
+
+    .skill-cell {
+      background: #fff;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .skill-cell-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-cell p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.65;
+    }
+
+    .resume-cta {
+      margin-top: 3.5rem;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 1.75rem 2rem;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .resume-cta p { margin: 0; font-size: 14px; color: var(--muted); }
+    .resume-cta strong { display: block; font-size: 15px; font-weight: 500; color: var(--navy); margin-bottom: 0.2rem; }
+
+    @media (max-width: 540px) {
+      .exp-item { grid-template-columns: 1fr; gap: 0.4rem 0; }
+      .exp-date { padding-top: 0; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .resume-cta { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -57,7 +145,6 @@
       <li><a href="about.html">About</a></li>
       <li><a href="orbitl.html">Orbitl</a></li>
       <li><a href="experience.html" class="active">Experience</a></li>
-      <li><a href="writing.html">Writing</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
@@ -66,74 +153,150 @@
 <div class="page">
 
   <div class="section">
-    <p class="eyebrow">Background</p>
+    <p class="eyebrow">Work, Research &amp; Leadership</p>
     <h1>Experience</h1>
-    <div class="divider" style="margin-left:0;"></div>
+    <div class="divider"></div>
+    <p style="font-size:16px; font-weight:300; color:var(--muted); max-width:520px; line-height:1.8;">
+      Five years across research labs, startups, and Fortune 500 manufacturing. I have run
+      experiments, built products, closed deals, and led organizations.
+    </p>
   </div>
 
-  <div class="section">
-    <h3>Founding</h3>
+  <div class="section-divider"><h3>Founding</h3></div>
 
-    <div class="exp-item">
-      <div class="exp-date">Sept 2025<br>Present</div>
-      <div>
-        <p class="exp-title">Founder</p>
-        <p class="exp-org">Orbitl</p>
-        <p class="exp-desc">
-          Built an AI research platform for scientists from zero. Led customer discovery across
-          multiple universities, established a multi-university GTM motion, assembled an intern
-          team, and brought the product to pre-seed stage.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h3>Work</h3>
-
-    <div class="exp-item">
-      <div class="exp-date">Add your<br>dates here</div>
-      <div>
-        <p class="exp-title">Your Role</p>
-        <p class="exp-org">Company Name</p>
-        <p class="exp-desc">
-          Add a brief description of what you did and the impact you made. Focus on outcomes
-          and transferable skills relevant to GTM, BD, or venture.
-        </p>
-      </div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-date">Add your<br>dates here</div>
-      <div>
-        <p class="exp-title">Your Role</p>
-        <p class="exp-org">Company Name</p>
-        <p class="exp-desc">
-          Add a brief description of what you did and the impact you made.
-        </p>
-      </div>
+  <div class="exp-item">
+    <div class="exp-date">Sept 2025<br>Present</div>
+    <div>
+      <p class="exp-title">Co-Founder</p>
+      <p class="exp-org">Orbitl &mdash; San Francisco, CA</p>
+      <ul class="exp-bullets">
+        <li>Built an AI research platform from zero to active pre-seed stage in under a year; owned product, sales, hiring, and fundraising simultaneously across a 4-person team while running 200+ customer discovery interviews.</li>
+        <li>Designed and executed dual-track GTM across 12+ universities and a deep tech B2B pipeline; ran the full sales cycle from cold outreach to pilot conversations, achieving ~12% reply rates into R&amp;D directors.</li>
+        <li>Automated outbound sales pipeline using Apollo, AI snippet personalization, and multi-step email sequences; built and managed full CRM and outreach infrastructure independently.</li>
+        <li>Working toward a $550K pre-seed SAFE raise; built financial model covering ARR projections, burn rate, and unit economics; structured milestone-based pilot agreements and NDA frameworks with industry partners.</li>
+        <li>Recruited and managed a 4-person intern team; handled hiring, onboarding, and sprint prioritization from day one.</li>
+      </ul>
     </div>
   </div>
 
-  <div class="section">
-    <h3>Education</h3>
+  <div class="section-divider"><h3>Industry</h3></div>
 
-    <div class="exp-item">
-      <div class="exp-date">2022 &ndash; 2026</div>
-      <div>
-        <p class="exp-title">B.S. Chemical Engineering</p>
-        <p class="exp-org">UC Berkeley</p>
-        <p class="exp-desc">
-          Graduated May 2026. Affiliated with SkyDeck PAD-13 and STEP.
-        </p>
-      </div>
+  <div class="exp-item">
+    <div class="exp-date">Jun 2025<br>Aug 2025</div>
+    <div>
+      <p class="exp-title">Core Supplier Technical Assistance Intern</p>
+      <p class="exp-org">Ford Motor Company &mdash; Dearborn, MI</p>
+      <ul class="exp-bullets">
+        <li>Led cross-functional collaboration with manufacturing engineers, quality teams, and international suppliers to resolve material reliability, corrosion, and capacity challenges while standardizing dip solder processes across sites.</li>
+        <li>Developed dip solder process to prevent wire corrosion and ensure long-term reliability using IPC standards and supplier collaboration.</li>
+        <li>Designed CAD-based fixtures for depth control and developed scalable process controls for multi-plant implementation.</li>
+        <li>Applied problem-solving frameworks including CTI, KPOVs, 3x5 Why Trees, and Drill-Down Trees for root cause analysis and process optimization.</li>
+      </ul>
     </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-date">Feb 2024<br>Jan 2025</div>
+    <div>
+      <p class="exp-title">Battery R&amp;D Intern</p>
+      <p class="exp-org">Chemix &mdash; Sunnyvale, CA</p>
+      <ul class="exp-bullets">
+        <li>Developed a system for modeling heat transfer in cylindrical cells, enabling accurate approximation of core temperature by analyzing surface temperature points across different scenarios.</li>
+        <li>Performed comprehensive testing on 18650, 2170, and 46XX cylindrical cells to evaluate battery cycle life across various voltage windows.</li>
+        <li>Conducted charge/discharge rate tests and calendar aging studies to analyze and optimize cell performance and durability.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-divider"><h3>Research</h3></div>
+
+  <div class="exp-item">
+    <div class="exp-date">Aug 2025<br>Present</div>
+    <div>
+      <p class="exp-title">Research Affiliate &mdash; Persson Group</p>
+      <p class="exp-org">Lawrence Berkeley National Laboratory &mdash; Berkeley, CA</p>
+      <ul class="exp-bullets">
+        <li>Investigated POF&#x2083; decomposition mechanisms relevant to SEI formation in Li-ion batteries using automated transition-state searches with Schr&ouml;dinger AutoTS and Jaguar.</li>
+        <li>Analyzed transition states, IRCs, and relative energies to identify lithium species and reaction pathways that favor stable SEI growth.</li>
+        <li>Executed and debugged large-scale HPC quantum chemistry workflows, from input design to diagnosing failed reaction maps and transition-state searches.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-date">Sept 2024<br>Present</div>
+    <div>
+      <p class="exp-title">Researcher &mdash; Wu Lab</p>
+      <p class="exp-org">UC Berkeley Material Science Engineering</p>
+      <ul class="exp-bullets">
+        <li>Researched growth and optimization of bromine-based perovskite crystals by tuning solvent systems and precursor ratios to improve crystal size, uniformity, and structural integrity for photovoltaic applications.</li>
+        <li>Applied photoluminescence spectroscopy, spatial mapping, and Voigt profile curve fitting in Python to characterize emission properties and analyze defect behavior, supporting development of silicon alternatives for solar energy.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-divider"><h3>Education</h3></div>
+
+  <div class="exp-item">
+    <div class="exp-date">Aug 2022<br>May 2026</div>
+    <div>
+      <p class="exp-title">B.S. Chemical Engineering</p>
+      <p class="exp-org">University of California, Berkeley</p>
+      <ul class="exp-bullets">
+        <li>Coursework: Electrochemical Processes, Chemical Process Analysis, Fluid Mechanics &amp; Heat Transfer, Transport &amp; Separation Processes, Thermodynamics, Chemical Kinetics, Thin Film Material Science, Materials in Energy Technologies, Properties of Electronic Materials.</li>
+        <li>President, Alpha Chi Sigma Chemistry Fraternity. Led 100+ member professional chemistry fraternity; fostered inclusive community, strengthened alumni and university relations, and expanded outreach to underserved groups.</li>
+        <li>Chem-E-Car Team Member. Built a sodium-ion powered car using Prussian Blue cathodes, carbon anodes, PVDF binders, and sodium perchlorate electrolytes.</li>
+        <li>Student Orientation Leader. Volunteering: Sustainability Clothing Drives, Denim Day, Lake Merritt Food Pantry, Berkeley Project, ISHVA Foundation.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-divider"><h3>Skills</h3></div>
+
+  <div class="skills-grid">
+    <div class="skill-cell">
+      <p class="skill-cell-label">AI &amp; Automation</p>
+      <p>Claude, Cursor, Claude Code, prompt engineering, LLM-assisted workflows, agentic tooling, automation of repetitive ops and sales workflows</p>
+    </div>
+    <div class="skill-cell">
+      <p class="skill-cell-label">GTM &amp; Sales</p>
+      <p>B2B sales cycles, dual-track GTM (top-down + bottom-up), customer discovery, cold outreach, pilot-to-conversion design, objection mapping, A/B experimentation</p>
+    </div>
+    <div class="skill-cell">
+      <p class="skill-cell-label">Fundraising</p>
+      <p>Pre-seed raise execution, SAFE structures, cap table basics, ARR modeling, burn rate, unit economics, investor decks, ROI analysis</p>
+    </div>
+    <div class="skill-cell">
+      <p class="skill-cell-label">Product &amp; Ops</p>
+      <p>Feature scoping, user state instrumentation, onboarding flow design, build-vs-buy decisions, activation metric ownership, sprint prioritization, Notion, Linear, Stripe, Apollo</p>
+    </div>
+    <div class="skill-cell">
+      <p class="skill-cell-label">Technical</p>
+      <p>Python (Pandas, Plotly Express), MATLAB, GROMACS, HPC workflow management, Raman spectroscopy, cell performance testing, cycle life testing, battery thermal management, CT scan analysis, CAD, test protocol design</p>
+    </div>
+    <div class="skill-cell">
+      <p class="skill-cell-label">Domain</p>
+      <p>Battery electrochemistry, SEI chemistry, Li-ion cell characterization (18650, 2170, 46XX), perovskite crystal growth, photovoltaic materials, IPC standards, dip solder processes</p>
+    </div>
+  </div>
+
+  <div class="resume-cta">
+    <div>
+      <strong>Full Resume</strong>
+      <p>Available in founder-facing and engineering-facing versions.</p>
+    </div>
+    <a href="resume.pdf" target="_blank" class="btn-primary">Download PDF &darr;</a>
   </div>
 
 </div>
 
 <footer>
-  &copy; 2026 Sanjana Ravi
+  <span>&copy; 2026 Sanjana Rayan</span>
+  <div class="footer-links">
+    <a href="https://x.com/sanjanarayan" target="_blank">X</a>
+    <a href="https://www.linkedin.com/in/sanjanarayan/" target="_blank">LinkedIn</a>
+    <a href="mailto:sanjanarayan@berkeley.edu">Email</a>
+  </div>
 </footer>
 
 </body>
