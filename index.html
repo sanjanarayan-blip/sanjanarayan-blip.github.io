@@ -5,159 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sanjana Rayan</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .hero { text-align: center; padding-top: 40px; }
-    .hero-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate-dk); margin-bottom: 1.5rem; }
-    .hero h1 { margin-bottom: 0.75rem; }
-    .hero-tagline { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--muted); font-style: italic; margin-bottom: 1.25rem; }
-    .hero-sub { font-size: 16px; color: var(--muted); max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.8; font-weight: 300; }
-    .hero-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 5rem; }
-
-    .highlights {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      overflow: hidden;
-      margin-bottom: 4rem;
-    }
-    .highlight-cell { background: var(--white); padding: 1.75rem 1.5rem; }
-    .highlight-label { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate-dk); margin-bottom: 0.6rem; }
-    .highlight-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--bordeaux); margin-bottom: 0.4rem; line-height: 1.3; }
-    .highlight-desc { font-size: 13px; color: var(--muted); line-height: 1.6; margin: 0; }
-
-    .snapshot { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 5rem; }
-    .snapshot-item { border-left: 2px solid rgba(86,29,37,0.25); padding-left: 1.25rem; }
-    .snapshot-item-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate-dk); margin-bottom: 0.35rem; }
-    .snapshot-item-value { font-size: 14px; color: var(--text); line-height: 1.5; margin: 0; }
-
-    .social-row { display: flex; justify-content: center; gap: 2rem; }
-    .social-link { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-    .social-link:hover { color: var(--bordeaux); text-decoration: none; }
-
-    @media (max-width: 600px) {
-      .highlights { grid-template-columns: 1fr; }
-      .snapshot { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
-<body>
-<div class="sidebar">
-  <a class="sidebar-logo" href="index.html">SR</a>
-  <a class="sidebar-link active" href="index.html">
-    <span class="sidebar-emoji">🏠</span>
-    <span class="sidebar-label">Home</span>
-  </a>
-  <a class="sidebar-link " href="about.html">
-    <span class="sidebar-emoji">🙋</span>
-    <span class="sidebar-label">About</span>
-  </a>
-  <a class="sidebar-link " href="orbitl.html">
-    <span class="sidebar-emoji">🚀</span>
-    <span class="sidebar-label">Orbitl</span>
-  </a>
-  <a class="sidebar-link " href="experience.html">
-    <span class="sidebar-emoji">💼</span>
-    <span class="sidebar-label">Work</span>
-  </a>
-  <a class="sidebar-link " href="life.html">
-    <span class="sidebar-emoji">📖</span>
-    <span class="sidebar-label">Life</span>
-  </a>
-  <a class="sidebar-link " href="contact.html">
-    <span class="sidebar-emoji">✉️</span>
-    <span class="sidebar-label">Contact</span>
-  </a>
-</div>
-<nav>
-  <div class="nav-inner">
-    <a class="nav-logo" href="index.html">SR</a>
-    <ul class="nav-links">
-      <li><a href="about.html">About</a></li>
-      <li><a href="orbitl.html">Orbitl</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="life.html">Life</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+<body class="dark-page">
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="sidebar-logo" href="index.html">SR</a>
+      <a class="sidebar-link active" href="home.html"><span class="sidebar-emoji">🏠</span><span class="sidebar-label">Home</span></a>
+      <a class="sidebar-link" href="about.html"><span class="sidebar-emoji">🙋</span><span class="sidebar-label">About</span></a>
+      <a class="sidebar-link" href="orbitl.html"><span class="sidebar-emoji">🚀</span><span class="sidebar-label">Orbitl</span></a>
+      <a class="sidebar-link" href="experience.html"><span class="sidebar-emoji">💼</span><span class="sidebar-label">Work</span></a>
+      <a class="sidebar-link" href="life.html"><span class="sidebar-emoji">📖</span><span class="sidebar-label">Life</span></a>
+      <a class="sidebar-link" href="contact.html"><span class="sidebar-emoji">✉️</span><span class="sidebar-label">Contact</span></a>
+    </aside>
+
+    <main class="landing">
+      <a class="skip-intro" href="home.html">Skip Intro</a>
+
+      <div class="landing-content">
+        <p class="genre-tags">Founder · Engineer · Researcher</p>
+        <h1 class="landing-name">Sanjana Rayan</h1>
+        <div class="landing-actions">
+          <a class="netflix-btn primary" href="home.html">▶ Resume</a>
+          <a class="netflix-btn secondary" href="about.html">ⓘ More Info</a>
+        </div>
+      </div>
+
+      <p class="landing-next">Next episode: Orbitl — The Company</p>
+
+      <div class="landing-progress">
+        <div class="progress-meta">
+          <span>S1 · E1&nbsp;&nbsp;About</span>
+          <span>Paused</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+    </main>
   </div>
-</nav>
-
-<div class="page">
-  <div class="hero">
-    <p class="hero-eyebrow">Chemical Engineer &amp; Founder</p>
-    <h1>Sanjana Rayan</h1>
-    <p class="hero-sub" style="font-size:18px; max-width:520px;">Hi, I'm Sanjana. I build things, lead teams, and make things happen. I started as an engineer, got pulled into startups, and found out I love the full arc: from research and first principles to strategy, sales, and execution.</p>
-    <div class="hero-links">
-      <a href="about.html" class="btn-primary">More about me</a>
-      <a href="contact.html" class="btn-secondary">Say hello</a>
-    </div>
-  </div>
-
-  <div class="section-rule">What I bring</div>
-
-  <div class="highlights">
-    <div class="highlight-cell">
-      <p class="highlight-label">Research</p>
-      <p class="highlight-title">Lab work at LBNL &amp; UC Berkeley</p>
-      <p class="highlight-desc">Quantum chemistry simulations on battery degradation at the Persson Group. Crystal growth and spectroscopy at the Wu Lab.</p>
-    </div>
-    <div class="highlight-cell">
-      <p class="highlight-label">Commercial</p>
-      <p class="highlight-title">Zero to commercial traction</p>
-      <p class="highlight-desc">200+ discovery interviews, GTM across 12+ universities, 4 pilots in progress, ~12% cold reply rates to senior R&amp;D. Built and ran the full sales motion solo.</p>
-    </div>
-    <div class="highlight-cell">
-      <p class="highlight-label">Leadership</p>
-      <p class="highlight-title">Founder &amp; operator</p>
-      <p class="highlight-desc">Built a 4-person team from scratch, ran hiring and sprints, led 100+ member org as President. Comfortable owning the room at any stage.</p>
-    </div>
-  </div>
-
-  <div class="section-rule">Snapshot</div>
-
-  <div class="snapshot">
-    <div class="snapshot-item">
-      <p class="snapshot-item-label">Currently</p>
-      <p class="snapshot-item-value">Founder, Orbitl. AI research platform for scientists.</p>
-    </div>
-    <div class="snapshot-item">
-      <p class="snapshot-item-label">Previously</p>
-      <p class="snapshot-item-value">Ford Motor Company &middot; Chemix &middot; LBNL Persson Group &middot; Wu Lab</p>
-    </div>
-    <div class="snapshot-item">
-      <p class="snapshot-item-label">Education</p>
-      <p class="snapshot-item-value">B.S. Chemical Engineering, UC Berkeley. May 2026.</p>
-    </div>
-    <div class="snapshot-item">
-      <p class="snapshot-item-label">Programs</p>
-      <p class="snapshot-item-value">Antler Residency &middot; SkyDeck PAD-13 &middot; STEP</p>
-    </div>
-    <div class="snapshot-item">
-      <p class="snapshot-item-label">Based</p>
-      <p class="snapshot-item-value">Bay Area, CA.</p>
-    </div>
-    <div class="snapshot-item">
-      <p class="snapshot-item-label">Interests</p>
-      <p class="snapshot-item-value">Vinyl &middot; Badminton &middot; Charcoal art &middot; Crochet &middot; Reading &middot; Coffee</p>
-    </div>
-  </div>
-
-  <div class="social-row">
-    <a class="social-link" href="https://x.com/sanjanabrayan" target="_blank">Twitter / X</a>
-    <a class="social-link" href="https://www.linkedin.com/in/sanjanarayan/" target="_blank">LinkedIn</a>
-    <a class="social-link" href="mailto:sanjanarayan@berkeley.edu">Email</a>
-  </div>
-</div>
-
-<footer>
-  <span>&copy; 2026 Sanjana Rayan</span>
-  <div class="footer-links">
-    <a href="https://x.com/sanjanabrayan" target="_blank">X</a>
-    <a href="https://www.linkedin.com/in/sanjanarayan/" target="_blank">LinkedIn</a>
-    <a href="mailto:sanjanarayan@berkeley.edu">Email</a>
-  </div>
-</footer>
 </body>
 </html>

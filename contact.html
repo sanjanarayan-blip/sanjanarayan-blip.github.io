@@ -5,83 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Sanjana Rayan</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .contact-links { margin-top: 2.5rem; }
-    .contact-row { display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 0; border-top: 1px solid var(--border); text-decoration: none; transition: opacity 0.15s; }
-    .contact-row:last-child { border-bottom: 1px solid var(--border); }
-    .contact-row:hover { opacity: 0.55; }
-    .contact-left { display: flex; align-items: center; gap: 1.25rem; }
-    .contact-icon { width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 3px; display: flex; align-items: center; justify-content: center; background: var(--white); }
-    .contact-icon svg { width: 16px; height: 16px; stroke: var(--bordeaux); fill: none; stroke-width: 1.5; }
-    .contact-label { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.2rem; }
-    .contact-value { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--text); }
-    .arrow { font-size: 1.1rem; color: var(--muted); transition: transform 0.15s; }
-    .contact-row:hover .arrow { transform: translateX(5px); }
-  </style>
 </head>
 <body>
-<nav>
-  <div class="nav-inner">
-    <a class="nav-logo" href="index.html">SR</a>
-    <ul class="nav-links">
-      <li><a href="about.html">About</a></li>
-      <li><a href="orbitl.html">Orbitl</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="life.html">Life</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="sidebar-logo" href="index.html">SR</a>
+      <a class="sidebar-link" href="home.html"><span class="sidebar-emoji">🏠</span><span class="sidebar-label">Home</span></a>
+      <a class="sidebar-link" href="about.html"><span class="sidebar-emoji">🙋</span><span class="sidebar-label">About</span></a>
+      <a class="sidebar-link" href="orbitl.html"><span class="sidebar-emoji">🚀</span><span class="sidebar-label">Orbitl</span></a>
+      <a class="sidebar-link" href="experience.html"><span class="sidebar-emoji">💼</span><span class="sidebar-label">Work</span></a>
+      <a class="sidebar-link" href="life.html"><span class="sidebar-emoji">📖</span><span class="sidebar-label">Life</span></a>
+      <a class="sidebar-link active" href="contact.html"><span class="sidebar-emoji">✉️</span><span class="sidebar-label">Contact</span></a>
+    </aside>
 
-<div class="page">
-  <div class="section">
-    <p class="eyebrow">Get in touch</p>
-    <h1>Contact</h1>
-    <div class="divider"></div>
-    <p style="color:var(--muted); font-size:16px; max-width:480px; font-weight:300; line-height:1.85;">
-      Hey, I'm Sanjana! I grew up in Hyderabad, India, made my way to UC Berkeley for chemical engineering, and now I'm building Orbitl in the Bay Area. I spend my days talking to scientists, closing deals, and figuring out how to make research less painful. Always up for conversations about startups, deep tech, GTM, or honestly just good coffee, matcha, or hunting down new sketching spots. I'm trying to get back into painting so any recommendations are very welcome. Don't be a stranger.
-    </p>
-  </div>
+    <div class="page-wrap episode-page">
+      <article class="episode-content">
+        <header class="episode-header">
+          <p class="episode-meta">S1 · E5</p>
+          <h1>Contact</h1>
+        </header>
 
-  <div class="contact-links">
-    <a class="contact-row" href="mailto:sanjanarayan@berkeley.edu">
-      <div class="contact-left">
-        <div class="contact-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></div>
-        <div><p class="contact-label">Email</p><p class="contact-value">sanjanarayan@berkeley.edu</p></div>
-      </div>
-      <span class="arrow">&rarr;</span>
-    </a>
-    <a class="contact-row" href="https://www.linkedin.com/in/sanjanarayan/" target="_blank">
-      <div class="contact-left">
-        <div class="contact-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7"/></svg></div>
-        <div><p class="contact-label">LinkedIn</p><p class="contact-value">linkedin.com/in/sanjanarayan</p></div>
-      </div>
-      <span class="arrow">&rarr;</span>
-    </a>
-    <a class="contact-row" href="https://x.com/sanjanabrayan" target="_blank">
-      <div class="contact-left">
-        <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M4 20L20 4" stroke-linecap="round"/></svg></div>
-        <div><p class="contact-label">Twitter / X</p><p class="contact-value">@sanjanabrayan</p></div>
-      </div>
-      <span class="arrow">&rarr;</span>
-    </a>
-    <a class="contact-row" href="https://orbitl.info" target="_blank">
-      <div class="contact-left">
-        <div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg></div>
-        <div><p class="contact-label">Orbitl</p><p class="contact-value">orbitl.info</p></div>
-      </div>
-      <span class="arrow">&rarr;</span>
-    </a>
-  </div>
-</div>
+        <section class="section">
+          <p>Hey, I'm Sanjana! I grew up in Hyderabad, India, made my way to UC Berkeley for chemical engineering, and now I'm building Orbitl in the Bay Area. I spend my days talking to scientists, closing deals, and figuring out how to make research less painful. Always up for conversations about startups, deep tech, GTM, or honestly just good coffee, matcha, or hunting down new sketching spots. I'm trying to get back into painting so any recommendations are very welcome. Don't be a stranger.</p>
+        </section>
 
-<footer>
-  <span>&copy; 2026 Sanjana Rayan</span>
-  <div class="footer-links">
-    <a href="https://x.com/sanjanabrayan" target="_blank">X</a>
-    <a href="https://www.linkedin.com/in/sanjanarayan/" target="_blank">LinkedIn</a>
-    <a href="mailto:sanjanarayan@berkeley.edu">Email</a>
+        <section class="contact-links">
+          <a class="contact-row" href="mailto:sanjanarayan@berkeley.edu">
+            <div>
+              <p class="contact-label">Email</p>
+              <p class="contact-value">sanjanarayan@berkeley.edu</p>
+            </div>
+            <span class="contact-arrow">→</span>
+          </a>
+
+          <a class="contact-row" href="https://www.linkedin.com/in/sanjanarayan/" target="_blank">
+            <div>
+              <p class="contact-label">LinkedIn</p>
+              <p class="contact-value">linkedin.com/in/sanjanarayan</p>
+            </div>
+            <span class="contact-arrow">→</span>
+          </a>
+
+          <a class="contact-row" href="https://x.com/sanjanabrayan" target="_blank">
+            <div>
+              <p class="contact-label">Twitter / X</p>
+              <p class="contact-value">@sanjanabrayan</p>
+            </div>
+            <span class="contact-arrow">→</span>
+          </a>
+
+          <a class="contact-row" href="https://orbitl.info" target="_blank">
+            <div>
+              <p class="contact-label">Orbitl</p>
+              <p class="contact-value">orbitl.info</p>
+            </div>
+            <span class="contact-arrow">→</span>
+          </a>
+        </section>
+      </article>
+    </div>
   </div>
-</footer>
 </body>
 </html>

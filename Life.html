@@ -3,112 +3,283 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Sanjana Rayan</title>
+  <title>Life — Sanjana Rayan</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .contact-links { margin-top: 2.5rem; }
-    .contact-row { display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 0; border-top: 1px solid var(--border); text-decoration: none; transition: opacity 0.15s; }
-    .contact-row:last-child { border-bottom: 1px solid var(--border); }
-    .contact-row:hover { opacity: 0.55; }
-    .contact-left { display: flex; align-items: center; gap: 1.25rem; }
-    .contact-icon { width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 3px; display: flex; align-items: center; justify-content: center; background: var(--white); }
-    .contact-icon svg { width: 16px; height: 16px; stroke: var(--bordeaux); fill: none; stroke-width: 1.5; }
-    .contact-label { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.2rem; }
-    .contact-value { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--text); }
-    .arrow { font-size: 1.1rem; color: var(--muted); transition: transform 0.15s; }
-    .contact-row:hover .arrow { transform: translateX(5px); }
+    .month-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--bordeaux);
+      margin-bottom: 1.25rem;
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+      min-height: 20px;
+    }
+
+    .book-card {
+      background: rgba(255, 250, 242, 0.95);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .book-card:hover {
+      border-color: rgba(86, 29, 37, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .book-cover {
+      width: 100%;
+      aspect-ratio: 2/3;
+      object-fit: cover;
+      display: block;
+    }
+
+    .book-cover-placeholder {
+      width: 100%;
+      aspect-ratio: 2/3;
+      background: linear-gradient(135deg, #f0d9a8, var(--pale-slate));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.9rem;
+      color: var(--bordeaux);
+      text-align: center;
+      padding: 1rem;
+      line-height: 1.4;
+    }
+
+    .book-info {
+      padding: 0.9rem 1rem;
+    }
+
+    .book-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+      line-height: 1.4;
+    }
+
+    .book-author {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .add-book-form {
+      background: rgba(255, 250, 242, 0.95);
+      border: 1px dashed rgba(86, 29, 37, 0.2);
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 0;
+    }
+
+    .add-book-form h4 {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .form-input {
+      flex: 1;
+      min-width: 180px;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      background: var(--beige);
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus {
+      border-color: var(--bordeaux);
+    }
+
+    .form-btn {
+      padding: 10px 20px;
+      background: var(--bordeaux);
+      color: var(--beige);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .form-btn:hover {
+      opacity: 0.85;
+    }
+
+    .form-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 0.75rem;
+      margin-bottom: 0;
+    }
+
+    .hobby-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .hobby-cell {
+      background: rgba(255, 250, 242, 0.95);
+      padding: 1.1rem 1.25rem;
+    }
+
+    .hobby-name {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text);
+      margin: 0;
+    }
+
+    @media (max-width: 540px) {
+      .book-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hobby-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   </style>
 </head>
 <body>
-<div class="sidebar">
-  <a class="sidebar-logo" href="index.html">SR</a>
-  <a class="sidebar-link " href="index.html">
-    <span class="sidebar-emoji">🏠</span>
-    <span class="sidebar-label">Home</span>
-  </a>
-  <a class="sidebar-link " href="about.html">
-    <span class="sidebar-emoji">🙋</span>
-    <span class="sidebar-label">About</span>
-  </a>
-  <a class="sidebar-link " href="orbitl.html">
-    <span class="sidebar-emoji">🚀</span>
-    <span class="sidebar-label">Orbitl</span>
-  </a>
-  <a class="sidebar-link " href="experience.html">
-    <span class="sidebar-emoji">💼</span>
-    <span class="sidebar-label">Work</span>
-  </a>
-  <a class="sidebar-link " href="life.html">
-    <span class="sidebar-emoji">📖</span>
-    <span class="sidebar-label">Life</span>
-  </a>
-  <a class="sidebar-link active" href="contact.html">
-    <span class="sidebar-emoji">✉️</span>
-    <span class="sidebar-label">Contact</span>
-  </a>
-</div>
-<nav>
-  <div class="nav-inner">
-    <a class="nav-logo" href="index.html">SR</a>
-    <ul class="nav-links">
-      <li><a href="about.html">About</a></li>
-      <li><a href="orbitl.html">Orbitl</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="life.html">Life</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="sidebar-logo" href="index.html">SR</a>
+      <a class="sidebar-link" href="home.html"><span class="sidebar-emoji">🏠</span><span class="sidebar-label">Home</span></a>
+      <a class="sidebar-link" href="about.html"><span class="sidebar-emoji">🙋</span><span class="sidebar-label">About</span></a>
+      <a class="sidebar-link" href="orbitl.html"><span class="sidebar-emoji">🚀</span><span class="sidebar-label">Orbitl</span></a>
+      <a class="sidebar-link" href="experience.html"><span class="sidebar-emoji">💼</span><span class="sidebar-label">Work</span></a>
+      <a class="sidebar-link active" href="life.html"><span class="sidebar-emoji">📖</span><span class="sidebar-label">Life</span></a>
+      <a class="sidebar-link" href="contact.html"><span class="sidebar-emoji">✉️</span><span class="sidebar-label">Contact</span></a>
+    </aside>
 
-<div class="page">
-  <div class="section">
-    <p class="eyebrow">Get in touch</p>
-    <h1>Contact</h1>
-    <div class="divider"></div>
-    <p style="color:var(--muted); font-size:16px; max-width:480px; font-weight:300; line-height:1.85;">
-      Hey, I'm Sanjana! I grew up in Hyderabad, India, made my way to UC Berkeley for chemical engineering, and now I'm building Orbitl in the Bay Area. I spend my days talking to scientists, closing deals, and figuring out how to make research less painful. Always up for conversations about startups, deep tech, GTM, or honestly just good coffee, matcha, or hunting down new sketching spots. I'm trying to get back into painting so any recommendations are very welcome. Don't be a stranger.
-    </p>
+    <div class="page-wrap episode-page">
+      <article class="episode-content">
+        <header class="episode-header">
+          <p class="episode-meta">S1 · E4</p>
+          <h1>Life</h1>
+        </header>
+
+        <section class="section">
+          <p style="font-size:16px; max-width:480px; line-height:1.8; color:var(--muted);">
+            Things I read, make, and love. Updated whenever I remember to.
+          </p>
+        </section>
+
+        <section class="section">
+          <h3>Books I'm reading</h3>
+          <div class="month-block">
+            <p class="month-label">July 2026</p>
+            <div class="book-grid" id="book-grid-july2026"></div>
+          </div>
+
+          <div class="add-book-form">
+            <h4>Add a book</h4>
+            <div class="form-row">
+              <input class="form-input" id="book-title-input" type="text" placeholder="Book title">
+              <input class="form-input" id="book-author-input" type="text" placeholder="Author (optional)">
+              <button class="form-btn" onclick="addBook()">Add</button>
+            </div>
+            <p class="form-note">Cover fetches automatically from Google Books.</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Hobbies</h3>
+          <div class="hobby-grid">
+            <div class="hobby-cell"><p class="hobby-name">Vinyl &amp; music</p></div>
+            <div class="hobby-cell"><p class="hobby-name">Badminton</p></div>
+            <div class="hobby-cell"><p class="hobby-name">Biking</p></div>
+            <div class="hobby-cell"><p class="hobby-name">Charcoal art</p></div>
+            <div class="hobby-cell"><p class="hobby-name">Crochet</p></div>
+            <div class="hobby-cell"><p class="hobby-name">Coffee &amp; matcha</p></div>
+            <div class="hobby-cell"><p class="hobby-name">Travel</p></div>
+            <div class="hobby-cell"><p class="hobby-name">Thrifting</p></div>
+            <div class="hobby-cell"><p class="hobby-name">Reading</p></div>
+          </div>
+        </section>
+      </article>
+    </div>
   </div>
 
-  <div class="contact-links">
-    <a class="contact-row" href="mailto:sanjanarayan@berkeley.edu">
-      <div class="contact-left">
-        <div class="contact-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></div>
-        <div><p class="contact-label">Email</p><p class="contact-value">sanjanarayan@berkeley.edu</p></div>
-      </div>
-      <span class="arrow">&rarr;</span>
-    </a>
-    <a class="contact-row" href="https://www.linkedin.com/in/sanjanarayan/" target="_blank">
-      <div class="contact-left">
-        <div class="contact-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7"/></svg></div>
-        <div><p class="contact-label">LinkedIn</p><p class="contact-value">linkedin.com/in/sanjanarayan</p></div>
-      </div>
-      <span class="arrow">&rarr;</span>
-    </a>
-    <a class="contact-row" href="https://x.com/sanjanabrayan" target="_blank">
-      <div class="contact-left">
-        <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M4 20L20 4" stroke-linecap="round"/></svg></div>
-        <div><p class="contact-label">Twitter / X</p><p class="contact-value">@sanjanabrayan</p></div>
-      </div>
-      <span class="arrow">&rarr;</span>
-    </a>
-    <a class="contact-row" href="https://orbitl.info" target="_blank">
-      <div class="contact-left">
-        <div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg></div>
-        <div><p class="contact-label">Orbitl</p><p class="contact-value">orbitl.info</p></div>
-      </div>
-      <span class="arrow">&rarr;</span>
-    </a>
-  </div>
-</div>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = JSON.parse(localStorage.getItem('books_july2026') || '[]');
+      saved.forEach((b) => renderBook(b.title, b.author, b.cover));
+    });
 
-<footer>
-  <span>&copy; 2026 Sanjana Rayan</span>
-  <div class="footer-links">
-    <a href="https://x.com/sanjanabrayan" target="_blank">X</a>
-    <a href="https://www.linkedin.com/in/sanjanarayan/" target="_blank">LinkedIn</a>
-    <a href="mailto:sanjanarayan@berkeley.edu">Email</a>
-  </div>
-</footer>
+    async function addBook() {
+      const titleInput = document.getElementById('book-title-input');
+      const authorInput = document.getElementById('book-author-input');
+      const title = titleInput.value.trim();
+      const author = authorInput.value.trim();
+      if (!title) return;
+
+      let cover = null;
+      try {
+        const query = author ? `${title}+inauthor:${author}` : title;
+        const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=1`);
+        const data = await res.json();
+        if (data.items && data.items[0].volumeInfo.imageLinks) {
+          cover = data.items[0].volumeInfo.imageLinks.thumbnail.replace('http:', 'https:');
+        }
+      } catch (e) {
+        // Keep card creation resilient even when API lookup fails.
+      }
+
+      renderBook(title, author, cover);
+
+      const saved = JSON.parse(localStorage.getItem('books_july2026') || '[]');
+      saved.push({ title, author, cover });
+      localStorage.setItem('books_july2026', JSON.stringify(saved));
+
+      titleInput.value = '';
+      authorInput.value = '';
+    }
+
+    function renderBook(title, author, cover) {
+      const grid = document.getElementById('book-grid-july2026');
+      const card = document.createElement('div');
+      card.className = 'book-card';
+      card.innerHTML = cover
+        ? `<img class="book-cover" src="${cover}" alt="${title}">`
+        : `<div class="book-cover-placeholder">${title}</div>`;
+      card.innerHTML += `<div class="book-info"><p class="book-title">${title}</p>${author ? `<p class="book-author">${author}</p>` : ''}</div>`;
+      grid.appendChild(card);
+    }
+  </script>
 </body>
 </html>
