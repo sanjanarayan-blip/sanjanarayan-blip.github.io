@@ -6,133 +6,52 @@
   <title>Orbitl — Sanjana Rayan</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .orbitl-hero {
-      background: var(--navy);
-      border-radius: 3px;
-      padding: 3.5rem 3rem;
-      margin-bottom: 3.5rem;
-      text-align: center;
-    }
-
-    .orbitl-hero-eyebrow {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(250,246,238,0.4);
-      margin-bottom: 1rem;
-    }
-
-    .orbitl-hero h2 {
-      font-family: 'EB Garamond', serif;
-      font-size: 3rem;
-      font-weight: 400;
-      color: var(--cream);
-      margin-bottom: 1rem;
-      letter-spacing: -0.01em;
-    }
-
-    .orbitl-hero p {
-      color: rgba(250,246,238,0.6);
-      max-width: 420px;
-      margin: 0 auto 2rem;
-      font-size: 15px;
-      font-weight: 300;
-      line-height: 1.75;
-    }
-
-    .orbitl-hero a {
-      display: inline-block;
-      padding: 10px 24px;
-      border: 1px solid rgba(250,246,238,0.25);
-      color: var(--cream);
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border-radius: 2px;
-      text-decoration: none;
-      transition: border-color 0.2s;
-    }
-
-    .orbitl-hero a:hover { border-color: rgba(250,246,238,0.7); text-decoration: none; }
-
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border: 1px solid var(--border);
-      border-radius: 3px;
-      overflow: hidden;
-      margin-bottom: 4rem;
-    }
-
-    .stat {
-      background: #fff;
-      padding: 1.75rem 1.25rem;
-      text-align: center;
-      border-right: 1px solid var(--border);
-    }
-
+    .orbitl-hero { background: var(--bordeaux); border-radius: 6px; padding: 3.5rem 3rem; margin-bottom: 3.5rem; text-align: center; }
+    .orbitl-hero-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,232,199,0.5); margin-bottom: 1rem; }
+    .orbitl-hero h2 { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 400; color: var(--beige); margin-bottom: 1rem; }
+    .orbitl-hero p { color: rgba(250,232,199,0.65); max-width: 420px; margin: 0 auto 2rem; font-size: 15px; font-weight: 300; line-height: 1.75; }
+    .orbitl-hero a { display: inline-block; padding: 10px 24px; border: 1px solid rgba(250,232,199,0.3); color: var(--beige); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 3px; text-decoration: none; transition: border-color 0.2s; }
+    .orbitl-hero a:hover { border-color: rgba(250,232,199,0.8); text-decoration: none; }
+    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; margin-bottom: 4rem; }
+    .stat { background: var(--white); padding: 1.75rem 1.25rem; text-align: center; border-right: 1px solid var(--border); }
     .stat:last-child { border-right: none; }
-
-    .stat-num {
-      font-family: 'EB Garamond', serif;
-      font-size: 2rem;
-      color: var(--navy);
-      line-height: 1;
-      margin-bottom: 0.4rem;
-    }
-
-    .stat-label {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 3px;
-      overflow: hidden;
-      margin-top: 1.5rem;
-    }
-
-    .two-col-cell {
-      background: #fff;
-      padding: 1.5rem 1.75rem;
-    }
-
-    .two-col-cell h4 {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.75rem;
-    }
-
-    .two-col-cell p {
-      font-size: 14px;
-      color: var(--muted);
-      margin: 0;
-      line-height: 1.65;
-    }
-
-    @media (max-width: 540px) {
-      .stat-grid { grid-template-columns: repeat(2, 1fr); }
-      .stat:nth-child(2) { border-right: none; }
-      .stat:nth-child(3) { border-top: 1px solid var(--border); }
-      .two-col { grid-template-columns: 1fr; }
-    }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--bordeaux); line-height: 1; margin-bottom: 0.4rem; }
+    .stat-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; margin-top: 1.5rem; }
+    .two-col-cell { background: var(--white); padding: 1.5rem 1.75rem; }
+    .two-col-cell h4 { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate-dk); margin-bottom: 0.75rem; }
+    .two-col-cell p { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.65; }
+    @media (max-width: 540px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } .two-col { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-
+<div class="sidebar">
+  <a class="sidebar-logo" href="index.html">SR</a>
+  <a class="sidebar-link " href="index.html">
+    <span class="sidebar-emoji">🏠</span>
+    <span class="sidebar-label">Home</span>
+  </a>
+  <a class="sidebar-link " href="about.html">
+    <span class="sidebar-emoji">🙋</span>
+    <span class="sidebar-label">About</span>
+  </a>
+  <a class="sidebar-link active" href="orbitl.html">
+    <span class="sidebar-emoji">🚀</span>
+    <span class="sidebar-label">Orbitl</span>
+  </a>
+  <a class="sidebar-link " href="experience.html">
+    <span class="sidebar-emoji">💼</span>
+    <span class="sidebar-label">Work</span>
+  </a>
+  <a class="sidebar-link " href="life.html">
+    <span class="sidebar-emoji">📖</span>
+    <span class="sidebar-label">Life</span>
+  </a>
+  <a class="sidebar-link " href="contact.html">
+    <span class="sidebar-emoji">✉️</span>
+    <span class="sidebar-label">Contact</span>
+  </a>
+</div>
 <nav>
   <div class="nav-inner">
     <a class="nav-logo" href="index.html">SR</a>
@@ -140,13 +59,13 @@
       <li><a href="about.html">About</a></li>
       <li><a href="orbitl.html" class="active">Orbitl</a></li>
       <li><a href="experience.html">Experience</a></li>
+      <li><a href="life.html">Life</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </nav>
 
 <div class="page">
-
   <div class="orbitl-hero">
     <p class="orbitl-hero-eyebrow">Founded Sept 2025</p>
     <h2>Orbitl</h2>
@@ -155,77 +74,33 @@
   </div>
 
   <div class="stat-grid">
-    <div class="stat">
-      <p class="stat-num">200+</p>
-      <p class="stat-label">Customer interviews</p>
-    </div>
-    <div class="stat">
-      <p class="stat-num">$550K</p>
-      <p class="stat-label">Pre-seed SAFE</p>
-    </div>
-    <div class="stat">
-      <p class="stat-num">12+</p>
-      <p class="stat-label">Universities in GTM</p>
-    </div>
-    <div class="stat">
-      <p class="stat-num">4</p>
-      <p class="stat-label">Pilots closed</p>
-    </div>
+    <div class="stat"><p class="stat-num">200+</p><p class="stat-label">Customer interviews</p></div>
+    <div class="stat"><p class="stat-num">$550K</p><p class="stat-label">Pre-seed target</p></div>
+    <div class="stat"><p class="stat-num">12+</p><p class="stat-label">Universities</p></div>
+    <div class="stat"><p class="stat-num">~12%</p><p class="stat-label">Cold reply rate</p></div>
   </div>
 
   <div class="section">
     <h3>The problem</h3>
-    <p>
-      Scientific research is slow not because scientists lack ability, but because the tools around
-      them are decades behind. Literature review is manual and fragmented. Knowledge stays siloed
-      inside labs and universities. Time that should go toward discovery gets spent on overhead.
-    </p>
-    <p>
-      The gap is especially sharp for early-career researchers who carry the bulk of the discovery
-      work but have the fewest systems to support them.
-    </p>
+    <p>Scientific research is slow not because scientists lack ability, but because the tools around them are decades behind. Literature review is manual and fragmented. Knowledge stays siloed inside labs and universities. Time that should go toward discovery gets spent on overhead.</p>
   </div>
 
   <div class="section">
     <h3>What we built</h3>
-    <p>
-      Orbitl gives researchers an AI-powered workspace to surface relevant literature, synthesize
-      findings, and organize their thinking. It is designed for the way scientists actually work,
-      not the way enterprise software assumes they do.
-    </p>
-
+    <p>Orbitl gives researchers an AI-powered workspace to surface relevant literature, synthesize findings, and organize their thinking. Designed for how scientists actually work.</p>
     <div class="two-col">
-      <div class="two-col-cell">
-        <h4>GTM motion</h4>
-        <p>Dual-track: top-down institutional partnerships and bottom-up researcher adoption across 12+ universities. ~12% reply rate cold outbound to R&amp;D directors.</p>
-      </div>
-      <div class="two-col-cell">
-        <h4>Commercial traction</h4>
-        <p>4 pilots in progress at Series A&ndash;C deep tech startups. Structured milestone-based pricing and NDA frameworks with industry partners.</p>
-      </div>
-      <div class="two-col-cell">
-        <h4>Team</h4>
-        <p>4-person team. Intern hiring, onboarding, and management run independently from day one.</p>
-      </div>
-      <div class="two-col-cell">
-        <h4>Fundraising</h4>
-        <p>Active $550K pre-seed SAFE raise in progress. ARR projections, burn rate modeling, and unit economics built in-house.</p>
-      </div>
+      <div class="two-col-cell"><h4>GTM motion</h4><p>Dual-track across 12+ universities. Top-down institutional partnerships and bottom-up researcher adoption. ~12% reply rate cold outbound to R&amp;D directors.</p></div>
+      <div class="two-col-cell"><h4>Commercial traction</h4><p>Pilot conversations at Series A&ndash;C deep tech startups. Milestone-based pricing and NDA frameworks structured with industry partners.</p></div>
+      <div class="two-col-cell"><h4>Team</h4><p>4-person team. Intern hiring, onboarding, and sprint management run independently from day one.</p></div>
+      <div class="two-col-cell"><h4>Fundraising</h4><p>Working toward a $550K pre-seed SAFE raise. ARR projections, burn rate modeling, and unit economics built in-house.</p></div>
     </div>
   </div>
 
   <div class="section">
     <h3>My role</h3>
-    <p>
-      I am the founder. I own product vision, GTM strategy, customer discovery, fundraising, and
-      team building simultaneously. My background in chemical engineering and computational
-      research gives me direct credibility with the scientists I sell to and the problems I'm solving.
-    </p>
-    <p>
-      Backed by Antler Residency, SkyDeck PAD-13, and STEP.
-    </p>
+    <p>I am the founder. I own product vision, GTM strategy, customer discovery, fundraising, and team building. My background in chemical engineering and computational research gives me direct credibility with the scientists I'm building for.</p>
+    <p>Backed by Antler Residency, SkyDeck PAD-13, and STEP.</p>
   </div>
-
 </div>
 
 <footer>
@@ -236,6 +111,5 @@
     <a href="mailto:sanjanarayan@berkeley.edu">Email</a>
   </div>
 </footer>
-
 </body>
 </html>

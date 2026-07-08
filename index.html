@@ -6,61 +6,12 @@
   <title>Sanjana Rayan</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .hero { padding-top: 40px; text-align: center; }
-
-    .hero-eyebrow {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 2rem;
-    }
-
-    .hero h1 { margin-bottom: 1.25rem; }
-
-    .hero-tagline {
-      font-family: 'EB Garamond', serif;
-      font-size: 1.25rem;
-      color: var(--muted);
-      font-style: italic;
-      margin-bottom: 1.25rem;
-    }
-
-    .hero-sub {
-      font-size: 16px;
-      color: var(--muted);
-      max-width: 520px;
-      margin: 0 auto 2.75rem;
-      line-height: 1.8;
-      font-weight: 300;
-    }
-
-    .hero-links {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 5rem;
-    }
-
-    .section-rule {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-      gap: 1.5rem;
-      margin: 0 0 3rem;
-      color: var(--muted);
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .section-rule::before, .section-rule::after {
-      content: '';
-      height: 1px;
-      background: var(--border);
-    }
+    .hero { text-align: center; padding-top: 40px; }
+    .hero-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate-dk); margin-bottom: 1.5rem; }
+    .hero h1 { margin-bottom: 0.75rem; }
+    .hero-tagline { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--muted); font-style: italic; margin-bottom: 1.25rem; }
+    .hero-sub { font-size: 16px; color: var(--muted); max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.8; font-weight: 300; }
+    .hero-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 5rem; }
 
     .highlights {
       display: grid;
@@ -68,84 +19,23 @@
       gap: 1px;
       background: var(--border);
       border: 1px solid var(--border);
-      border-radius: 3px;
+      border-radius: 6px;
       overflow: hidden;
       margin-bottom: 4rem;
     }
+    .highlight-cell { background: var(--white); padding: 1.75rem 1.5rem; }
+    .highlight-label { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate-dk); margin-bottom: 0.6rem; }
+    .highlight-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--bordeaux); margin-bottom: 0.4rem; line-height: 1.3; }
+    .highlight-desc { font-size: 13px; color: var(--muted); line-height: 1.6; margin: 0; }
 
-    .highlight-cell {
-      background: #fff;
-      padding: 1.75rem 1.5rem;
-    }
+    .snapshot { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 5rem; }
+    .snapshot-item { border-left: 2px solid rgba(86,29,37,0.25); padding-left: 1.25rem; }
+    .snapshot-item-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate-dk); margin-bottom: 0.35rem; }
+    .snapshot-item-value { font-size: 14px; color: var(--text); line-height: 1.5; margin: 0; }
 
-    .highlight-label {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.75rem;
-    }
-
-    .highlight-title {
-      font-family: 'EB Garamond', serif;
-      font-size: 1.1rem;
-      color: var(--navy);
-      margin-bottom: 0.4rem;
-      line-height: 1.3;
-    }
-
-    .highlight-desc {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    .snapshot {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 5rem;
-    }
-
-    .snapshot-item {
-      border-left: 2px solid var(--accent);
-      padding-left: 1.25rem;
-    }
-
-    .snapshot-item-label {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.35rem;
-    }
-
-    .snapshot-item-value {
-      font-size: 14px;
-      color: var(--navy);
-      line-height: 1.5;
-      margin: 0;
-    }
-
-    .social-row {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    .social-link {
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .social-link:hover { color: var(--navy); text-decoration: none; }
+    .social-row { display: flex; justify-content: center; gap: 2rem; }
+    .social-link { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .social-link:hover { color: var(--bordeaux); text-decoration: none; }
 
     @media (max-width: 600px) {
       .highlights { grid-template-columns: 1fr; }
@@ -154,7 +44,33 @@
   </style>
 </head>
 <body>
-
+<div class="sidebar">
+  <a class="sidebar-logo" href="index.html">SR</a>
+  <a class="sidebar-link active" href="index.html">
+    <span class="sidebar-emoji">🏠</span>
+    <span class="sidebar-label">Home</span>
+  </a>
+  <a class="sidebar-link " href="about.html">
+    <span class="sidebar-emoji">🙋</span>
+    <span class="sidebar-label">About</span>
+  </a>
+  <a class="sidebar-link " href="orbitl.html">
+    <span class="sidebar-emoji">🚀</span>
+    <span class="sidebar-label">Orbitl</span>
+  </a>
+  <a class="sidebar-link " href="experience.html">
+    <span class="sidebar-emoji">💼</span>
+    <span class="sidebar-label">Work</span>
+  </a>
+  <a class="sidebar-link " href="life.html">
+    <span class="sidebar-emoji">📖</span>
+    <span class="sidebar-label">Life</span>
+  </a>
+  <a class="sidebar-link " href="contact.html">
+    <span class="sidebar-emoji">✉️</span>
+    <span class="sidebar-label">Contact</span>
+  </a>
+</div>
 <nav>
   <div class="nav-inner">
     <a class="nav-logo" href="index.html">SR</a>
@@ -162,6 +78,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="orbitl.html">Orbitl</a></li>
       <li><a href="experience.html">Experience</a></li>
+      <li><a href="life.html">Life</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
@@ -171,14 +88,10 @@
   <div class="hero">
     <p class="hero-eyebrow">Chemical Engineer &amp; Founder</p>
     <h1>Sanjana Rayan</h1>
-    <p class="hero-tagline">Engineer who builds companies.</p>
-    <p class="hero-sub">
-      I research battery chemistry, build AI products, lead teams, and close commercial deals.
-      UC Berkeley ChemE. Founder of Orbitl. Backed by Antler, SkyDeck, and STEP.
-    </p>
+    <p class="hero-sub" style="font-size:18px; max-width:520px;">Hi, I'm Sanjana. I build things, lead teams, and make things happen. I started as an engineer, got pulled into startups, and found out I love the full arc: from research and first principles to strategy, sales, and execution.</p>
     <div class="hero-links">
-      <a href="experience.html" class="btn-primary">My work</a>
-      <a href="contact.html" class="btn-secondary">Get in touch</a>
+      <a href="about.html" class="btn-primary">More about me</a>
+      <a href="contact.html" class="btn-secondary">Say hello</a>
     </div>
   </div>
 
@@ -187,18 +100,18 @@
   <div class="highlights">
     <div class="highlight-cell">
       <p class="highlight-label">Research</p>
-      <p class="highlight-title">Computational chemistry at LBNL</p>
-      <p class="highlight-desc">HPC quantum chemistry workflows investigating battery SEI formation. Autonomous diagnosis of large-scale compute failures.</p>
+      <p class="highlight-title">Lab work at LBNL &amp; UC Berkeley</p>
+      <p class="highlight-desc">Quantum chemistry simulations on battery degradation at the Persson Group. Crystal growth and spectroscopy at the Wu Lab.</p>
     </div>
     <div class="highlight-cell">
       <p class="highlight-label">Commercial</p>
-      <p class="highlight-title">200+ customer discovery interviews</p>
-      <p class="highlight-desc">Full B2B sales cycles, dual-track GTM across 12+ universities, cold outbound to R&amp;D directors at ~12% reply rates.</p>
+      <p class="highlight-title">Zero to commercial traction</p>
+      <p class="highlight-desc">200+ discovery interviews, GTM across 12+ universities, 4 pilots in progress, ~12% cold reply rates to senior R&amp;D. Built and ran the full sales motion solo.</p>
     </div>
     <div class="highlight-cell">
       <p class="highlight-label">Leadership</p>
-      <p class="highlight-title">President, 100+ member org</p>
-      <p class="highlight-desc">Led Alpha Chi Sigma at Berkeley. Built committee structures, expanded alumni relations, ran outreach programs.</p>
+      <p class="highlight-title">Founder &amp; operator</p>
+      <p class="highlight-desc">Built a 4-person team from scratch, ran hiring and sprints, led 100+ member org as President. Comfortable owning the room at any stage.</p>
     </div>
   </div>
 
@@ -211,7 +124,7 @@
     </div>
     <div class="snapshot-item">
       <p class="snapshot-item-label">Previously</p>
-      <p class="snapshot-item-value">Ford Motor Company. Teserac (battery R&amp;D). LBNL Persson Group. Wu Lab.</p>
+      <p class="snapshot-item-value">Ford Motor Company &middot; Chemix &middot; LBNL Persson Group &middot; Wu Lab</p>
     </div>
     <div class="snapshot-item">
       <p class="snapshot-item-label">Education</p>
@@ -222,12 +135,12 @@
       <p class="snapshot-item-value">Antler Residency &middot; SkyDeck PAD-13 &middot; STEP</p>
     </div>
     <div class="snapshot-item">
-      <p class="snapshot-item-label">Technical</p>
-      <p class="snapshot-item-value">Python, MATLAB, HPC workflows, Raman spectroscopy, cell performance testing</p>
+      <p class="snapshot-item-label">Based</p>
+      <p class="snapshot-item-value">Bay Area, CA.</p>
     </div>
     <div class="snapshot-item">
-      <p class="snapshot-item-label">Domain</p>
-      <p class="snapshot-item-value">Battery electrochemistry, SEI chemistry, perovskite crystal growth, Li-ion characterization</p>
+      <p class="snapshot-item-label">Interests</p>
+      <p class="snapshot-item-value">Vinyl &middot; Badminton &middot; Charcoal art &middot; Crochet &middot; Reading &middot; Coffee</p>
     </div>
   </div>
 
@@ -235,7 +148,6 @@
     <a class="social-link" href="https://x.com/sanjanabrayan" target="_blank">Twitter / X</a>
     <a class="social-link" href="https://www.linkedin.com/in/sanjanarayan/" target="_blank">LinkedIn</a>
     <a class="social-link" href="mailto:sanjanarayan@berkeley.edu">Email</a>
-    <a class="social-link" href="resume.pdf" target="_blank">Resume</a>
   </div>
 </div>
 
@@ -247,6 +159,5 @@
     <a href="mailto:sanjanarayan@berkeley.edu">Email</a>
   </div>
 </footer>
-
 </body>
 </html>
